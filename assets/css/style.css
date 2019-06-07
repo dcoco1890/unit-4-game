@@ -23,3 +23,7 @@ body {
 .img:hover {
     background-color: #c6a6c8
 }
+
+#wins, #losses {
+    background-color: #a4c2f4
+}

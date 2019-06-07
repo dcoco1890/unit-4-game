@@ -1,32 +1,51 @@
-//score variables
+// score variables
 var wins = 0;
 var losses = 0;
-//crystal values
+// crystal values
 let cry1 = 0;
 let cry2 = 0;
 let cry3 = 0;
 let cry4 = 0;
-//comp number and user number
+// comp number and user number
 let compNum = 0;
 let userNum = 0;
+// empty array used to hold crystal
+let nums = [];
 
+
+// creates 4 numbers between 1 and 12 and adds them into the nums array
+// ensures that all four values are different
+function fourDifValues () {
+    while(nums.length < 4){
+        var x = Math.floor(Math.random() * 12) + 1;
+        if(!nums.includes(x)){
+            nums.push(x);
+        }
+    }
+}
+
+
+        //depreciated 
 
 //weird crystal object that creates a random number between 1 and 12
-var crystal = {
-   value: function(){
-    var x = Math.floor(Math.random() * 12) + 1;
-    return x;
-   }
-}
+// var crystal = {
+//    value: function(){
+//     var x = Math.floor(Math.random() * 12) + 1;
+//     return x;
+//    }
+// }
+
+
 
 // This function creates the computers number and the number randomly assigned to each crystal
 function getValue(){
     var x = Math.floor(Math.random() * 101) + 19;
-    cry1 = crystal.value();
-    cry2 = crystal.value();
-    cry3 = crystal.value();
-    cry4 = crystal.value();
-
+    nums = [];
+    fourDifValues();
+    cry1 = nums[0];
+    cry2 = nums[1];
+    cry3 = nums[2];
+    cry4 = nums[3];
     return x;
 }
 // this function right here "reStarts" the game, creates a new computer number, and random values for the crystals.
@@ -35,6 +54,7 @@ function reStart () {
     userNum = 0;
     $('#comp-score').text(compNum);
     $('#user-score').text(userNum);
+    $('#head').text("Crystal Collector");
 }
 
 // this function is called by any of the four clicky functions. If it determines the computer number and user number are equal,
@@ -45,12 +65,14 @@ function updateScore () {
     if(userNum === compNum){
         wins++;
         $('#user-score').text(userNum);
-        //change elements on screen 
-        //add press any key to play again
+        $('#w').text(wins);
+        $('#head').text("Click any crystal to play again");
     }
     else if(userNum > compNum){
         losses++;
         $('#user-score').text(userNum);
+        $('#l').text(losses);
+        $('#head').text("Click any crystal to play again");
     }
     else{
         $('#user-score').text(userNum);

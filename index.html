@@ -10,7 +10,7 @@
 <body>
 <header>
     <div class="jumbotron py-2">
-        <h1 class="text-center py-1 display-4">Crystal Collector</h1>
+        <h1 class="text-center py-1 display-4" id="head">Crystal Collector</h1>
     </div>
 </header>
 <main>
@@ -55,8 +55,26 @@
 
             </div>
 
+            <!-- div containing win and lose cards -->
+            <div class="col-md-3">
+                <div class="card" id="wins">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h2>Win: <span id="w" class="badge badge-secondary"></span></h2>
+                        </div>
+                    </div>
+                </div>
+            <br>
 
-            <div class="col-md-3"></div>
+            
+                    <div class="card" id="losses">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h2>Lose: <span id="l" class="badge badge-secondary"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 
