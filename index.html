@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Crystal Collector</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../unit-4-game/assets/css/style.css">
 </head>
 <body>
@@ -13,23 +13,55 @@
         <h1 class="text-center py-1 display-4">Crystal Collector</h1>
     </div>
 </header>
-<main class="">
+<main>
     <div class="container">
         <div class="row">
-            <div class="col-md-3 circle text-center">
+            <!--div containing crystals-->
+            <div class="col-md-3 circle text-center card">
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_01.png" class="img-thumbnail bg-transparent border-0"></div>
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_02.png" class="img-thumbnail bg-transparent border-0"></div>
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_03.png" class="img-thumbnail bg-transparent border-0"></div>
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_04.png" class="img-thumbnail bg-transparent border-0"></div>
             </div>
 
+            <!-- div containing user score and score to get -->
+            <div class="col-md-6">
+                <div class="card" id="card">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <h2 id="computer-num">Score</h2>
+                            <h3 class="display-4" id="comp-score">s</h3>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" id="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2 id="user-num">Score</h2>
+                                <h3 class="display-4" id="user-score">s</h3>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <div class="card" id="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h4>Click a gem to get your score to equal the computer's. Be careful, if you bust, it's game over!</h4>
+                            </div>
+                        </div>
+                </div>
 
-            <div class="col-md-6"></div>
+
+            </div>
+
+
             <div class="col-md-3"></div>
         </div>
     </div>
 
 </main>
+<script src="../unit-4-game/assets/javascript/game.js"></script>
 </body>
 
 
