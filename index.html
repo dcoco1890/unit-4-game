@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <!--div containing crystals-->
-            <div class="col-md-3 circle text-center card">
+            <div class="col-md-3 col-sm-3 circle text-center card px-0">
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_01.png" class="img-thumbnail bg-transparent border-0" id="one"></div>
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_02.png" class="img-thumbnail bg-transparent border-0" id="two"></div>
                 <div class="img"><img src="../unit-4-game/assets/images/crystal_03.png" class="img-thumbnail bg-transparent border-0" id="three"></div>
@@ -25,10 +25,10 @@
             </div>
 
             <!-- div containing user score and score to get -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
                 <div class="card" id="card">
                     <div class="card-body">
-                        <div class="text-center">
+                        <div class="text-center card-header">
                             <h2 id="computer-num">Number To Beat</h2>
                             <h3 class="display-4" id="comp-score">s</h3>
                         </div>
@@ -37,16 +37,16 @@
                 <br>
                 <div class="card" id="card">
                         <div class="card-body">
-                            <div class="text-center">
+                            <div class="text-center card-header">
                                 <h2 id="user-num">Your Number</h2>
                                 <h3 class="display-4" id="user-score">s</h3>
                             </div>
                         </div>
                 </div>
                 <br>
-                <div class="card" id="card">
+                <div class="card d-sm-none d-md-block" id="card">
                         <div class="card-body">
-                            <div class="text-center">
+                            <div class="text-center card-header">
                                 <h4>Click a gem to get your score to equal the computer's. The gems have a random value from 1-12. Be careful, if you bust, it's game over!</h4>
                             </div>
                         </div>

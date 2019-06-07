@@ -8,7 +8,7 @@ body {
 }
 
 .jumbotron {
-    background-color: #8186d5;
+    background-color: #b4a7d6;
 }
 
 .circle {
@@ -17,5 +17,9 @@ body {
 }
 
 #card {
-    background-color: #c6cbef;
+    background-color: #d5a6bd;
+}
+
+.img:hover {
+    background-color: #c6a6c8
 }
