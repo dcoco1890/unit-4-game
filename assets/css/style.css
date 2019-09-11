@@ -4,15 +4,20 @@ img {
 }
 
 body {
-    background-color: #494ca2;
+    background-color: #d9eeec;
 }
 
 .jumbotron {
-    background-color: #b4a7d6;
+    background-color: #3c70a4;
+    border-radius: 2px;
+}
+
+h2.nav {
+    text-shadow: 1px 1px 5px #da9833;
+    color: white;
 }
 
 .circle {
-   
     background-color: #c6cbef;
 }
 
@@ -24,6 +29,7 @@ body {
     background-color: #c6a6c8
 }
 
-#wins, #losses {
+#wins,
+#losses {
     background-color: #a4c2f4
 }

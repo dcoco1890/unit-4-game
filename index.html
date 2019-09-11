@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Crystal Collector</title>
@@ -7,66 +8,67 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../unit-4-game/assets/css/style.css">
 </head>
-<body>
-<header>
-    <div class="jumbotron py-2">
-        <h1 class="text-center py-1 display-4" id="head">Crystal Collector</h1>
-    </div>
-</header>
-<main>
-    <div class="container">
-        <div class="row">
-            <!--div containing crystals-->
-            <div class="col-md-3 col-sm-3 circle text-center card px-0">
-                <div class="img"><img src="../unit-4-game/assets/images/crystal_01.png" class="img-thumbnail bg-transparent border-0" id="one"></div>
-                <div class="img"><img src="../unit-4-game/assets/images/crystal_02.png" class="img-thumbnail bg-transparent border-0" id="two"></div>
-                <div class="img"><img src="../unit-4-game/assets/images/crystal_03.png" class="img-thumbnail bg-transparent border-0" id="three"></div>
-                <div class="img"><img src="../unit-4-game/assets/images/crystal_04.png" class="img-thumbnail bg-transparent border-0" id="four"></div>
-            </div>
 
-            <!-- div containing user score and score to get -->
-            <div class="col-md-6 col-sm-6">
-                <div class="card" id="card">
-                    <div class="card-body">
-                        <div class="text-center card-header">
-                            <h2 id="computer-num">Number To Beat</h2>
-                            <h3 class="display-4" id="comp-score">s</h3>
+<body>
+    <header>
+        <div class="jumbotron py-2">
+            <h2 class="nav" id="head">Crystal Collector</h2>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <!--div containing crystals-->
+                <div class="col-xs-6 col-sm-3 circle text-center card px-0">
+                    <div class="img"><img src="../unit-4-game/assets/images/crystal_01.png" class="img-thumbnail bg-transparent border-0" id="one"></div>
+                    <div class="img"><img src="../unit-4-game/assets/images/crystal_02.png" class="img-thumbnail bg-transparent border-0" id="two"></div>
+                    <div class="img"><img src="../unit-4-game/assets/images/crystal_03.png" class="img-thumbnail bg-transparent border-0" id="three"></div>
+                    <div class="img"><img src="../unit-4-game/assets/images/crystal_04.png" class="img-thumbnail bg-transparent border-0" id="four"></div>
+                </div>
+
+                <!-- div containing user score and score to get -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="card" id="card">
+                        <div class="card-body">
+                            <div class="text-center card-header">
+                                <h2 id="computer-num">Number To Beat</h2>
+                                <h3 class="display-4" id="comp-score">s</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="card" id="card">
+                    <br>
+                    <div class="card" id="card">
                         <div class="card-body">
                             <div class="text-center card-header">
                                 <h2 id="user-num">Your Number</h2>
                                 <h3 class="display-4" id="user-score">s</h3>
                             </div>
                         </div>
-                </div>
-                <br>
-                <div class="card d-sm-none d-md-block" id="card">
+                    </div>
+                    <br>
+                    <div class="card d-sm-none d-md-block" id="card">
                         <div class="card-body">
                             <div class="text-center card-header">
                                 <h4>Click a gem to get your score to equal the computer's. The gems have a random value from 1-12. Be careful, if you bust, it's game over!</h4>
                             </div>
                         </div>
+                    </div>
+
+
                 </div>
 
-
-            </div>
-
-            <!-- div containing win and lose cards -->
-            <div class="col-md-3">
-                <div class="card" id="wins">
-                    <div class="card-body">
-                        <div class="card-header">
-                            <h2>Win: <span id="w" class="badge badge-secondary"></span></h2>
+                <!-- div containing win and lose cards -->
+                <div class="col-md-3">
+                    <div class="card" id="wins">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h2>Win: <span id="w" class="badge badge-secondary"></span></h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <br>
+                    <br>
 
-            
+
                     <div class="card" id="losses">
                         <div class="card-body">
                             <div class="card-header">
@@ -75,11 +77,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
 
-</main>
-<script src="../unit-4-game/assets/javascript/game.js"></script>
+    </main>
+    <script src="../unit-4-game/assets/javascript/game.js"></script>
 </body>
 
 
