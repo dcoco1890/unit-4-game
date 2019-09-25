@@ -1,7 +1,18 @@
 img {
-    height: 10em;
-    width: 10em;
+    height: 5em;
+    width: 5em;
 }
+
+h4,
+h5 {
+    display: inline;
+}
+
+h5 {
+    font-size: 4em;
+}
+
+#one:hover {}
 
 body {
     background-color: #d9eeec;
@@ -21,12 +32,30 @@ h2.nav {
     background-color: #c6cbef;
 }
 
-#card {
+.score-box {
+    background-color: #a4c2f4;
+    width: 100%;
+}
+
+.card {
     background-color: #d5a6bd;
 }
 
+#ursc {
+    margin-top: 2.3rem;
+}
+
+.card-body {
+    padding: .5rem;
+    white-space: nowrap;
+}
+
 .img:hover {
-    background-color: #c6a6c8
+    background-color: rgba(0, 0, 0, .6756);
+    transform: rotateX(5deg) scale(1.2);
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    border-radius: 90%;
 }
 
 #wins,

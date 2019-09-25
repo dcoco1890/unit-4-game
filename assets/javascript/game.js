@@ -15,17 +15,17 @@ let nums = [];
 
 // creates 4 numbers between 1 and 12 and adds them into the nums array
 // ensures that all four values are different
-function fourDifValues () {
-    while(nums.length < 4){
+function fourDifValues() {
+    while (nums.length < 4) {
         var x = Math.floor(Math.random() * 12) + 1;
-        if(!nums.includes(x)){
+        if (!nums.includes(x)) {
             nums.push(x);
         }
     }
 }
 
 
-        //depreciated 
+//deprecated 
 
 //weird crystal object that creates a random number between 1 and 12
 // var crystal = {
@@ -38,7 +38,7 @@ function fourDifValues () {
 
 
 // This function creates the computers number and the number randomly assigned to each crystal
-function getValue(){
+function getValue() {
     var x = Math.floor(Math.random() * 101) + 19;
     nums = [];
     fourDifValues();
@@ -49,7 +49,7 @@ function getValue(){
     return x;
 }
 // this function right here "reStarts" the game, creates a new computer number, and random values for the crystals.
-function reStart () {
+function reStart() {
     compNum = getValue();
     userNum = 0;
     $('#comp-score').text(compNum);
@@ -61,23 +61,29 @@ function reStart () {
 // it will increase the win counter and update screen elements accordingly. If the users number became larger than the comps
 // number, it will increment losses and update the screen accordingly. If neither of those are true, it simply replaces the 
 // user number text on the screen with the new value of the user number (as determined by clicking a crystal)
-function updateScore () {
-    if(userNum === compNum){
+function updateScore() {
+
+    if (userNum === compNum) {
         wins++;
         $('#user-score').text(userNum);
         $('#w').text(wins);
         $('#head').text("Click any crystal to play again");
-    }
-    else if(userNum > compNum){
+        $(".modal-title").text("You WIN");
+        $("#modal-body").text(`Good job, bob. Now do it again! Click on a crystal to play again. But be careful, the numbers won't be the same!`);
+        $("#modal").modal();
+    } else if (userNum > compNum) {
         losses++;
         $('#user-score').text(userNum);
         $('#l').text(losses);
         $('#head').text("Click any crystal to play again");
-    }
-    else{
+        $(".modal-title").text("You Lose");
+        $("#modal-body").text(`Nice try, guy. Try to get your score equal to mine though. Click on a crystal to play again.
+         But be careful, the numbers won't be the same!`);
+        $("#modal").modal();
+    } else {
         $('#user-score').text(userNum);
     }
-    
+
 }
 
 // four click functions, one for each crystal. On a click, the function first checks to see if the Users Number is 
@@ -85,38 +91,35 @@ function updateScore () {
 // of the users number by the randomly assigned crystal value, then runs Update Score.
 
 $('#one').on("click", function() {
-    if(userNum >= compNum){
+
+    if (userNum >= compNum) {
         reStart();
-    }
-    else{
+    } else {
         userNum += cry1;
         updateScore();
     }
 });
 $('#two').on("click", function() {
-    if(userNum >= compNum){
+    if (userNum >= compNum) {
         reStart();
-    }
-    else{
+    } else {
         userNum += cry2;
         updateScore();
     }
 });
 $('#three').on("click", function() {
-   
-    if(userNum >= compNum){
+
+    if (userNum >= compNum) {
         reStart();
-    }
-    else{
+    } else {
         userNum += cry3;
         updateScore();
     }
 });
 $('#four').on("click", function() {
-    if(userNum >= compNum){
+    if (userNum >= compNum) {
         reStart();
-    }
-    else{
+    } else {
         userNum += cry4;
         updateScore();
     }
