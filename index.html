@@ -84,19 +84,14 @@
             <div class="row">
 
                 <br>
-                <div class="card" id="card">
-                    <div class="card-body">
-                        <div class="text-center card-header">
-                            <h2 id="user-num">Your Number</h2>
-                            <h3 class="display-4" id="user-score">s</h3>
-                        </div>
-                    </div>
-                </div>
+
                 <br>
-                <div class="card d-sm-none d-md-block" id="card">
+                <div class="box">
                     <div class="card-body">
-                        <div class="text-center card-header">
-                            <h4>Click a gem to get your score to equal the computer's. The gems have a random value from 1-12. Be careful, if you bust, it's game over!</h4>
+                        <div class="card-header" id="inst">
+                            <h6 class="txt">Click a gem to get your score to equal the computer's. Each gem has a random value from 1-12</h6>
+                            <h6 class="txt"> No two gems have the same value. Value is randomly generated at the beginning of each new game. </h6>
+                            <h6 class="txt"> Be careful, if you bust, it's game over!</h6>
                         </div>
                     </div>
                 </div>
@@ -104,7 +99,11 @@
 
             </div>
 
-            <!-- div containing win and lose cards -->
+            <div class="row" id="end">
+                <div class="num-box">
+                    <p style="display:none" id="cry-num"> cry num</p>
+                </div>
+            </div>
 
         </div>
         </div>

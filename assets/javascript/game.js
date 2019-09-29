@@ -1,17 +1,29 @@
 // score variables
 var wins = 0;
 var losses = 0;
+
 // crystal values
 let cry1 = 0;
 let cry2 = 0;
 let cry3 = 0;
 let cry4 = 0;
+
 // comp number and user number
 let compNum = 0;
 let userNum = 0;
+
 // empty array used to hold crystal
 let nums = [];
 
+// hidden crynum that flashes when you click 
+// for now will run everytime, maybe later I will edit to only run once
+let numFlash = $("#cry-num");
+
+
+function flashNum(cryValue) {
+    numFlash.text(cryValue);
+    numFlash.css({ "display": "" });
+}
 
 // creates 4 numbers between 1 and 12 and adds them into the nums array
 // ensures that all four values are different
@@ -24,9 +36,7 @@ function fourDifValues() {
     }
 }
 
-
 //deprecated 
-
 //weird crystal object that creates a random number between 1 and 12
 // var crystal = {
 //    value: function(){
@@ -34,8 +44,6 @@ function fourDifValues() {
 //     return x;
 //    }
 // }
-
-
 
 // This function creates the computers number and the number randomly assigned to each crystal
 function getValue() {
@@ -52,6 +60,7 @@ function getValue() {
 function reStart() {
     compNum = getValue();
     userNum = 0;
+
     $('#comp-score').text(compNum);
     $('#user-score').text(userNum);
     $('#head').text("Crystal Collector");
@@ -91,6 +100,7 @@ function updateScore() {
 // of the users number by the randomly assigned crystal value, then runs Update Score.
 
 $('#one').on("click", function() {
+    flashNum(cry1);
 
     if (userNum >= compNum) {
         reStart();
@@ -100,6 +110,7 @@ $('#one').on("click", function() {
     }
 });
 $('#two').on("click", function() {
+    flashNum(cry2);
     if (userNum >= compNum) {
         reStart();
     } else {
@@ -108,7 +119,7 @@ $('#two').on("click", function() {
     }
 });
 $('#three').on("click", function() {
-
+    flashNum(cry3);
     if (userNum >= compNum) {
         reStart();
     } else {
@@ -117,6 +128,7 @@ $('#three').on("click", function() {
     }
 });
 $('#four').on("click", function() {
+    flashNum(cry4);
     if (userNum >= compNum) {
         reStart();
     } else {
