@@ -17,12 +17,19 @@ let nums = [];
 
 // hidden crynum that flashes when you click 
 // for now will run everytime, maybe later I will edit to only run once
-let numFlash = $("#cry-num");
+const numFlash = $("#cry-num");
 
+const agBut = $("#again-button");
 
+// changes the text of the hidden div to the value of the crystal clicked on.
 function flashNum(cryValue) {
     numFlash.text(cryValue);
+    numFlash.addClass("slide-out-blurred-top");
     numFlash.css({ "display": "" });
+    setTimeout(function() {
+        numFlash.removeClass("slide-out-blurred-top");
+        numFlash.css({ "display": "none" });
+    }, 500);
 }
 
 // creates 4 numbers between 1 and 12 and adds them into the nums array
@@ -136,6 +143,8 @@ $('#four').on("click", function() {
         updateScore();
     }
 });
+
+agBut.on("click", reStart);
 
 
 //This kicks off the Whole shebang!
